@@ -1,9 +1,0 @@
-1.      superklasse: Klasse die gemeenschappelijke attributn en methoden weergeeft. Deze attributen en methoden worden geërft door de subklasses. 
-        subklasse: De uitbreiding van een superklasse. Superklasse met iets "extra's"
-        abstracte klasse: Een klasse waarvan je geen objecten kunt creeëren. 
-        interface: Een manier waarop twee systemen communiceren zonder elkaar inhoudelijk te kennen. 
-   
-2.      Bij een superklasse noteer je de klasse met de gemeenschappelijke attributen en methoden en deze verbind je doormiddel van pijlen met de subklassen. 
-        Een interface noteer je met <<interface>> en je tekent de klassen die het implementeerd. 
-        
-3.      De subklasse neemt alle attributen en methoden van de superklasse over. 
