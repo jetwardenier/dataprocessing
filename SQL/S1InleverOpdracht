@@ -1,8 +1,7 @@
-alter table MEDEWERKERS2
-add geslacht varchar(1);
-constraint check_geslacht
-CHECK (geslacht if not null and geslacht = "M" or "V");
-
+alter table MEDEWERKERS2 add geslacht varchar(1);
+alter table MEDEWERKERS2 add CONSTRAINT geslacht_check
+    CHECK (geslacht ('M', 'V')); 
+    
 CREATE SEQUENCE afdelingnr
 START WITH 10
 INCREMENT BY 10
@@ -10,13 +9,13 @@ minvalue 10
 maxvalue 100;
 
 insert into afdelingen
-VALUES (60, 'HENK', 'EINDHOVEN', 7698); 
+VALUES (afdelingsnr_sequence.NEXTVAL, 'HENK', 'EINDHOVEN', 7698); 
 insert into afdelingen
-VALUES (70, 'JAN' , 'EINDHOVEN' , 7839);
+VALUES (afdelingsnr_sequence.NEXTVAL, 'JAN' , 'EINDHOVEN' , 7839);
 insert into afdelingen
-VALUES (80, 'FREEK', 'SCHIJNDEL', 7752);
+VALUES (afdelingsnr_sequence.NEXTVAL, 'FREEK', 'SCHIJNDEL', 7752);
 insert into afdelingen
-VALUES (90, 'PIETHEIJN' , 'GREUNINGEN', 7782);
+VALUES (afdelingsnr_sequence.NEXTVAL, 'PIETHEIJN' , 'GREUNINGEN', 7782);
 
 CREATE TABLE adressen
 POSTCODE VARCHAR(6)
