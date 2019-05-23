@@ -1,42 +1,53 @@
-import java.util.ArrayList;
+package hu.nl.hibernate;
+
 import java.util.Date;
 
 public class Reiziger {
-	private int reizigerId;
-	private String naam;
+	private int reizigerID;
+	private String voorl;
+	private String tussenvoegsel;
+	private String achternaam;
 	private Date gbdatum;
-	private ArrayList<OvChipkaart> ovKaarten = new ArrayList<OvChipkaart>();
 
-	public Reiziger() {
-	}
+	public Reiziger() {}
 
 	public int getReizigerId() {
-		return reizigerId;
+	return this.reizigerID;
 	}
 
-	public void setReizigerId(int reizigerId) {
-		this.reizigerId = reizigerId;
+	public void setReizigerId(int reizigerID) {
+	this.reizigerID = reizigerID;
 	}
 
-	public String getNaam() {
-		return naam;
+	public String getVoorletters() {
+	return this.voorl;
 	}
 
-	public void setNaam(String naam) {
-		this.naam = naam;
+	public void setVoorletters(String voorl) {
+	this.voorl = voorl;
 	}
 
-	public Date getGBdatum() {
-		return gbdatum;
+	public String getTussenvoegsel() {
+	return this.tussenvoegsel;
 	}
 
-	public void setGBdatum(Date gbdatum) {
-		this.gbdatum = gbdatum;
+	public void setTussenvoegsel(String tussenvoegsel) {
+	this.tussenvoegsel = tussenvoegsel;
 	}
 
-	public void voegOvToe(OvChipkaart ov) {
-		if (!this.ovKaarten.contains(ov)) {
-			this.ovKaarten.add(ov);
-		}
+	public String getAchternaam() {
+	return this.achternaam;
 	}
-}
+
+	public void setAchternaam(String achternaam) {
+	this.achternaam = achternaam;
+	}
+
+	public Date getGeboortedatum() {
+	return this.gbdatum;
+	}
+	public void setGeboortedatum(Date date) {
+	this.gbdatum = date;
+	}
+	}
+
